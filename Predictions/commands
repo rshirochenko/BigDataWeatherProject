@@ -1,0 +1,19 @@
+spark-submit --class "ModelFinal.PredictDataSet1Final" --master local[2] target/scala-2.10/prediction1_2.10-1.0.jar
+
+spark-submit --class "ModelFinal.GeneratePreditionDataSet1Final" --master local[2] target/scala-2.10/generatestationprediction_2.10-1.0.jar
+
+
+
+spark-submit --class "ModelFinal.PredictDataSet2Final" --master local[2] target/scala-2.10/prediction2_2.10-1.0.jar
+
+spark-submit --class "ModelFinal.GeneratePreditionDataSet2Final" --master local[2] target/scala-2.10/generatestationprediction2_2.10-1.0.jar
+
+spark-submit --class "Dataset1.UpdateData" --master local[2] target/scala-2.10/updata_2.10-1.0.jar
+def reformatByColumn(stringsFromOneStation:String):String = {
+    var lines = stringsFromOneStation.split(";")
+    var lines_group_by_date = lines.map(_.split(",")).groupBy(x => x(1))
+    var lines_group_by_date_sorted = ListMap(lines_group_by_date.toSeq.sortBy(_._1):_*)
+    
+    var result = lines_group_by_date_sorted.map{group => formLine(group._2)} 
+    return result.mkString(";")
+  }

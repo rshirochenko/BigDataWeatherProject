@@ -1,0 +1,15 @@
+[0m[[0minfo[0m] [0mPackaging /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/mongo_play_2.10-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	StationAdd$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/StationAdd$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	Station.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/Station.class[0m
+[0m[[0mdebug[0m] [0m	StationAdd.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/StationAdd.class[0m
+[0m[[0mdebug[0m] [0m	StationAdd$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/StationAdd$$anonfun$1.class[0m
+[0m[[0mdebug[0m] [0m	StationAdd$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/StationAdd$.class[0m
+[0m[[0mdebug[0m] [0m	Station$.class[0m
+[0m[[0mdebug[0m] [0m	  /home/rshir/bigWeatherData/weather/AddStationsToMongoDB(ISD dataset)/target/scala-2.10/classes/Station$.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

@@ -1,0 +1,14 @@
+package location
+
+import database._
+import com.mongodb.casbah.commons.MongoDBObject
+
+object Location {  
+	val context = new MongoContext
+ 	context.connect()
+ 	
+	def main(args: Array[String]) {
+	  	println("Hello all!1")
+	} 
+
+}

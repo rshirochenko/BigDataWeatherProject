@@ -1,0 +1,2 @@
+1. Launch getStationsId. This makes search of all stations id in the dataset
+2. Launch reformatDataByStations. This reformats the data by stations id folder	

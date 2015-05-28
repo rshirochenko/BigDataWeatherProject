@@ -1,0 +1,9 @@
+This folder repeats the code in the WebApplicatioon/RESTservice/src/main/scala/recommendation folder.
+
+Location class of the current location. This class should receive the location from GET request, 
+InterestPoint class - search for the nearest points of the interest
+Weather class - make interpolation of the weather and give back weather(case class weather_data) for the current location//
+Recomendation class - get nearest available places and give back the final recomended places for shown on the map of the web-service
+As result: Location class in the end should send the response to the server
+
+

@@ -1,0 +1,2 @@
+Main-Class: prediction1.PredictDataSet1Final
+Class-Path: /usr/share/java/scala-library.jar

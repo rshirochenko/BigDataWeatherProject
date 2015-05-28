@@ -1,0 +1,17 @@
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
+
+
+object Station {
+	def main(args: Array[String]) {
+	
+		val conf = new SparkConf().setAppName("Get station")
+        	val sc = new SparkContext(new SparkConf().setAppName("Station"))
+
+		val weather = sc.textFile("hdfs:///projects/bravvfings/datasets/ghcn/*.csv")
+   		val weather_data = weather.map(line => (line.split(",")(0)))
+   		weather_data.coalesce(1,true).saveAsTextFile("stations_id")
+	}
+	
+}

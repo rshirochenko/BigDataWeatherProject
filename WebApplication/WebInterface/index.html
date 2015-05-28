@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Big Data - Dashboard</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="content-type" content="application/json; charset=UTF-8">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- FAVICON -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+
+        <!-- Material design -->
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/materialize.css" rel="stylesheet">
+
+
+	</head>
+	<body>
+
+<!-- begin template -->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header">
+  <a class="navbar-brand" href="#"><img class="logo" src="img/logo_white.png"> Weather Project - Big Data - EPFL 2015</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="https://github.com/BigData2015Team/bigWeatherData">GitHub</a></li>
+        <li><a href="#">Report</a></li>
+        <!-- <li><a href="#">Link</a></li> -->
+        <li>&nbsp;</li>
+      </ul>
+    </div>
+</div>
+
+
+
+<div class="container-fluid" id="main">
+
+  <div class="row content">
+  	<div class="col-xs-2" id="left">
+    
+     <span style="text-align:center" id="title">
+     
+    </span> 
+      <!-- item list -->
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">Location</div>
+
+        <div class="input-field" style="padding:5%;">
+         
+        </div>
+
+
+        <p style="margin-left:30px;">
+          <!-- Doesn't work for the moment -->
+            <a href="#"  class="center-block btn " onClick="setMyPosition()">Current <i class="mdi-maps-my-location left"></i></a>
+            <br><br>
+        </p>
+
+
+      </div>
+      
+      <hr>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Activity</div>
+        <p> 
+            <p>
+              <a href="#"  class="center-block btn " onClick="setAll()">All</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setSport()">Sport</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setTourism()">Tourism</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setCultural()">Cultural</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setParks()">Parks</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setLeisure()">Leisure</a>
+            </p>
+            <p>
+              <a href="#"  class="center-block btn " onClick="setNightlife()">Nightlife</a>
+            </p>
+            
+
+        </p>
+
+
+
+      </div>
+      <hr>
+
+      <div id="infobox" class="panel panel-default">
+        <div class="panel-heading">Place</div>
+        <p>
+          <ul>
+              <li><p><span id="span1" class="title"> Name : </span></p></li>
+              <li><p><span id="span2" class="title"> Detail :  </span></p></li>
+              <li><p><span id="span3" class="title"> Temperature : </span></p></li>
+          </ul> 
+
+        </p>
+
+
+      </div>
+
+      
+
+      <!-- FOR TESTS : -->
+      
+<!--         <a class="btn" onclick=" Materialize.toast(storm, 3000, 'notification')">storm</a>
+        <br><br>
+        <a class="btn" onclick=" Materialize.toast(rain, 3000, 'notification')">rain</a>
+        <br><br>
+        <a class="btn" onclick=" Materialize.toast(change, 3000, 'notification')">change</a>
+        <br><br>
+        <a class="btn" onclick=" Materialize.toast(fair, 3000, 'notification')">fair</a>
+        <br><br>
+        <a class="btn" onclick=" Materialize.toast(very_dry, 3000, 'notification')">very_dry</a>
+
+ -->
+    </div>
+
+   <!--  <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
+    <div class="col-xs-10" id="map-canvas">
+
+        
+    </div>
+
+    <div>
+      <input id="pac-input" class="controls" type="text" placeholder="Looking for another place ?">
+
+    </div>
+    
+
+
+
+      <!-- CARD -->
+
+            
+
+    
+  </div>
+
+
+</div>
+<!-- end template -->
+
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed&libraries=places"></script>
+		<script src="js/map.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+
+
+    <!-- Toast part -->
+
+    <script type="text/javascript">
+
+
+            var temperature = '25°C'; //to merge with your JS variable
+
+
+            //each var corresponding to the value 0 to 4
+            
+
+            var storm = '<ul><li><img src="img/storm.jpg"/></li><li><div id="content">Be careful, stormy weather ! </div> <span id="temp">' +temperature + '</span> </ul>';
+            var rain = '<ul><li><img src="img/rain.jpg"/></li><li><div id="content">It\'s raining outside ! </div> <span id="temp">' +temperature + '</span> </ul>';
+            var change = '<ul><li><img src="img/change.jpg"/></li><li><div id="content">The weather is changing ! </div> <span id="temp">' +temperature + '</span> </ul>';
+            var fair = '<ul><li><img src="img/fair.jpg"/></li><li><div id="content">Sunny but cloudy! </div> <span id="temp">' +temperature + '</span> </ul>';
+            var very_dry = '<ul><li><img src="img/very_dry.jpg"/></li><li><div id="content">Sunny time. Enjoy ! </div> <span id="temp">' +temperature + '</span> </ul>';
+
+
+
+    </script>
+
+    <script type="text/javascript">
+
+    // Notification automatically displayed on laod
+    //have to change 'very_dry' by the corresponding barometer value
+    Materialize.toast(very_dry, 3000, 'notification');
+      
+    </script>
+
+
+    
+
+
+
+	</body>
+</html>

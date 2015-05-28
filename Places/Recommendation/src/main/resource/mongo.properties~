@@ -1,0 +1,5 @@
+host=localhost
+port=27017
+dbName=scala-mongo-dev
+username=test
+password=test

@@ -1,0 +1,3 @@
+Copy.java was used to copy files from ftp://ftp.ncdc.noaa.gov/pub/data/noaa/ to cluster.
+It iterates over all years and all stations names from list of US stations.
+After copying  files it puts it in a folder with station name and unpack it.

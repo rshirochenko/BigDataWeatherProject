@@ -1,0 +1,3 @@
+AddStationsToMongoDB(GHCN dataset) - add the GHCN stations in the MongoDB database
+AddStationsToMongoDB(ISD dataset) - add the ISD stations in the MongoDB database
+
